@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="en" />
+        <meta name="robots" content="noindex, follow" />
+        <title>aciTypewriter - Test suite - Typewriter effect with jQuery</title>
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery.aciTypewriter.js"></script>
+        <style type="text/css">
+            <!--
+            body {
+                margin:0;
+                padding:10px;
+                color: #000;
+            }
+            body * {
+                font-family:Verdana, Geneva, sans-serif;
+                font-size:12px;
+            }
+            .width {
+                width:800px;
+            }
+            -->
+        </style>
+    </head>
+    <body>
+
+        <div id="block1" class="width">
+            <b style="color:green">#block1 having also LI, IMG and TABLE elements. The LI are hidden until text begin to display in it (same goes for TABLE and table TR). Also the images are
+                hidden until all previuos text are displayed. All these are configurable with plugin options by using jQuery selectors. Elements like BR, SCRIPT and multiple
+                spaces are excluded from the typewriter effect. Please note that the DOM at the text node level is changed but - in the end - is reverted to the original state.
+                Any text formatting can be used inside typewriter as all inline tags are preserved (see B, I, A tags here). Fade in effect is built in, can be disabled if wanted.
+                The typewriter works at a word or character level and multiple instances can be run in the same time (each with it's own settings).</b><br />
+            <ul>
+                <li>Lorem <a href="#ipsum" title="">ipsum</a> dolor sit amet, consectetur adipiscing elit.</li>
+                <li>In eget arcu eget nisi eleifend varius.</li>
+                <li>Mauris molestie vehicula arcu, eget <b>tincidunt</b> sapien porttitor ac.</li>
+                <li>Phasellus tempus sapien vitae quam pretium mollis.</li>
+                <li>Duis <i>bibendum</i> ligula sed velit commodo ullamcorper.</li>
+            </ul>
+            <p> </p>
+            <ul>
+                <li>Pellentesque vulputate diam sed nunc consectetur adipiscing.</li>
+                <li><a href="#another-link" title="">Aliquam molestie ligula at nunc semper sodales.</a></li>
+                <li>Vivamus ultricies est vitae turpis aliquet sed suscipit sem cursus.</li>
+                <li>Maecenas posuere felis at lorem facilisis vitae viverra lectus <a href="#link" title="">interdum</a>.</li>
+            </ul>
+            <p> </p>
+            <ul>
+                <li>Vestibulum a metus dui, quis tempus velit.</li>
+            </ul>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a   blandit neque. Ut et neque eu arcu <strong>rutrum malesuada</strong> ac id arcu. Maecenas
+                arcu purus, egestas quis tincidunt in, congue ut nisl. Nunc fringilla   porttitor convallis. Sed tincidunt quam in eros tempor ut bibendum lacus   hendrerit.
+                Pellentesque ullamcorper, odio quis rhoncus cursus, elit   nulla accumsan nisi, ac mattis urna metus tincidunt sapien. Quisque   lectus ligula, consequat sed
+                viverra ac, ultricies eu quam. </p>
+            <p> Phasellus eu odio porta augue pulvinar bibendum at vel quam. Maecenas   condimentum, erat id congue viverra, odio mauris pretium risus,   sollicitudin ornare
+                urna turpis vel enim. Nunc consectetur egestas   ipsum, eget tempor erat porttitor vel. Donec pellentesque placerat quam,   at consequat ligula lobortis eu.
+                Phasellus a nunc neque. Integer   gravida lobortis feugiat. Cras aliquet, quam eget rhoncus scelerisque,   nulla lorem commodo leo, ut rhoncus leo tortor a mi.
+                In ac dictum   turpis. </p>
+            <img src="image/00000022.jpg" border="0" alt="" />
+            <img src="image/00000058.jpg" border="0" alt="" />
+            <p> Ut vestibulum vehicula gravida. <a href="#a-link-here" title="">Suspendisse sagittis</a>, erat et viverra   dapibus, libero nibh suscipit ante, at viverra odio
+                nunc a risus. Ut eu   lacus et nibh <em>cursus condimentum</em> sed sed sapien. Sed aliquam elementum   urna et feugiat. Pellentesque hendrerit felis augue,
+                et dignissim   lectus. Cras tempus consequat faucibus. Nullam eget justo nulla.   Maecenas at tellus sapien. Etiam mattis cursus felis sed mattis. </p>
+            <p>&nbsp;</p>
+            <table cellpadding="3" cellspacing="3" border="1">
+                <tr>
+                    <th>#</th>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Row 1</td>
+                    <td>consectetur adipiscing elit</td>
+                    <td>sollicitudin ornare</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Row 2</td>
+                    <td>aliquam elementum</td>
+                    <td>viverra   dapibus</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Row 3</td>
+                    <td>bibendum at vel quam</td>
+                    <td>quis tincidunt in</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Row 4</td>
+                    <td>urna turpis vel enim</td>
+                    <td> ipsum dolor sit amet</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Row 5</td>
+                    <td>odio mauris pretium risus</td>
+                    <td> et neque eu arcu</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Row 6</td>
+                    <td>ipsum dolor sit amet</td>
+                    <td>pellentesque placerat</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Row 7</td>
+                    <td>felis at lorem facilisis</td>
+                    <td>erat id congue viverra</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Row 8</td>
+                    <td>libero nibh suscipit ante</td>
+                    <td>augue pulvinar bibendum</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Row 9</td>
+                    <td>vestibulum vehicula</td>
+                    <td>erat et viverra   dapibus</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Row 10</td>
+                    <td>odio quis rhoncus</td>
+                    <td>vestibulum vehicula gravida</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Row 11</td>
+                    <td>tincidunt quam in eros</td>
+                    <td>tempus consequat faucibus</td>
+                </tr>
+            </table>
+            <a id="table" href="#" title="Restart table">Restart table</a>
+
+            <br /><br /><br />
+
+            <!--
+
+                Erat et viverra   dapibus, libero nibh suscipit ante, at viverra odio
+                nunc a risus. Ut eu   lacus et nibh <em>cursus condimentum</em> sed sed sapien. Sed aliquam elementum   urna et feugiat. Pellentesque hendrerit felis augue,
+                et dignissim   lectus. Cras tempus consequat faucibus. Nullam eget justo nulla.   Maecenas at tellus sapien. Etiam mattis cursus felis sed mattis.
+
+            -->
+
+        </div>
+
+        <p id="block2" class="width">
+            <b style="color:red">#block2 paused after #2 second and restarted after #3 more and at the end continue with #block3 (with faster speed).</b><br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a   blandit neque. Ut et neque eu arcu <strong>rutrum malesuada</strong> ac id arcu. Maecenas
+            arcu purus, egestas quis tincidunt in, congue ut nisl. Nunc fringilla   porttitor convallis. Sed tincidunt quam in eros tempor ut bibendum lacus   hendrerit.
+            Pellentesque ullamcorper, odio quis rhoncus cursus, elit   nulla accumsan nisi, ac mattis urna metus tincidunt sapien. Quisque   lectus ligula, consequat sed
+            viverra ac, ultricies eu quam.
+        </p>
+
+        <div id="block3" class="width">
+            Ut vestibulum vehicula gravida. <a href="#a-link-here" title="">Suspendisse sagittis</a>, erat et viverra   dapibus, libero nibh suscipit ante, at viverra odio
+            nunc a risus. Ut eu   lacus et nibh <em>cursus condimentum</em> sed sed sapien. Sed aliquam elementum   urna et feugiat. Pellentesque hendrerit felis augue,
+            et dignissim   lectus. Cras tempus consequat faucibus. Nullam eget justo nulla.   Maecenas at tellus sapien. Etiam mattis cursus felis sed mattis.
+        </div>
+
+        <br />
+        <a id="body" href="#" title="Restart document">Restart document (please wait all to finish first)</a>
+
+        <script language="javascript" type="text/javascript">
+
+            $(document).ready(function(){
+
+                // simple typewriter
+
+                $('#block1').aciTypewriter({
+                    autoInit: false, // or true to auto-init typewriter
+                    autoStart: false, // or true to auto-start typewriter
+                    callbacks: {
+                        beforeInit: function(object){
+                            //alert('before init: ' + object.attr('id'));
+                        },
+                        afterInit: function(object){
+                            //alert('after init: ' + object.attr('id'));
+                        },
+                        beforeStart: function(object){
+                            //alert('before start: ' + object.attr('id'));
+                        },
+                        afterFinish: function(object){
+                            //alert('after finish: ' + object.attr('id'));
+                        }
+                    }
+                });
+
+                // manual init because 'autoInit' was false
+                $('#block1').aciTypewriter('init');
+                // manual start because 'autoStart' was false
+                $('#block1').aciTypewriter('start');
+
+                // stop block1 after 4s and resume after 10s
+
+                window.setTimeout(function(){
+                    $('#block1').aciTypewriter('pause');
+                    window.setTimeout(function(){
+                        $('#block1').aciTypewriter('resume');
+                    }, 10000);
+                }, 4000);
+
+                // link the two next blocks together (block2 & block3)
+                // first will have a longer text delay and the second will be faster
+
+                $('#block3').aciTypewriter({
+                    textDelay: 10,
+                    autoStart: false
+                });
+
+                $('#block2').aciTypewriter({
+                    textDelay: 50,
+                    autoStart: true,
+                    callbacks: {
+                        afterFinish: function(object){
+                            // at the end, start block3
+                            $('#block3').aciTypewriter('start');
+                        }
+                    }
+                });
+
+                // stop block2 after 2s and resume after 3s
+
+                window.setTimeout(function(){
+                    $('#block2').aciTypewriter('pause');
+                    window.setTimeout(function(){
+                        $('#block2').aciTypewriter('resume');
+                    }, 3000);
+                }, 2000);
+
+                // play with the table :)
+
+                $('#table').click(function(){
+                    $('table').aciTypewriter('destroy').aciTypewriter({autoStart:true});
+                    return false;
+                });
+
+                // play with the entire document :))
+
+                $('#body').click(function(){
+                    $('body').aciTypewriter('destroy').aciTypewriter({autoStart:true});
+                    return false;
+                });
+
+            });
+
+        </script>
+
+    </body>
+</html>
